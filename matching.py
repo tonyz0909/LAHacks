@@ -12,5 +12,10 @@ for line in data:
     else:
         groups[lname] = [(line[0],line[1])]
 
-print(len(groups.keys()))   
+def accuracy(groups):
+    keys = groups.keys()
+    for key in keys:
+        if groups
+
+print(len(groups.keys()))
 
