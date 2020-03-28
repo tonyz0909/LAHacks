@@ -1,9 +1,9 @@
--- LOAD DATA INFILE 'PatientMatchingData.csv'
--- INTO TABLE patients
--- FIELDS TERMINATED BY ',' 
--- ENCLOSED BY '"'
--- LINES TERMINATED BY '\n'
--- IGNORE 1 ROWS;
+LOAD DATA LOCAL INFILE 'PatientMatchingData.csv'
+INTO TABLE patients
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
 
 -- BULK INSERT patients
 -- FROM 'PatientMatchingData.csv'
