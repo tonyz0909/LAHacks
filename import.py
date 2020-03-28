@@ -1,7 +1,7 @@
 import pymysql
 import csv
-connection = pymysql.connect(host = 'localhost', user = 'root', 
-    db = 'teaching', charset = 'utf8mb4', cursorclass = pymysql.cursors.DictCursor)
+connection = pymysql.connect(host = 'localhost', user = 'root', password = 'admin',
+    db = 'PatientMatching', charset = 'utf8mb4', cursorclass = pymysql.cursors.DictCursor)
 with open("PatientMatchingData.csv") as infile:
     reader = csv.reader(infile)
     reader = list(reader)
