@@ -7,7 +7,7 @@
 
 ### 1) Introduction 
 
-For this project, we decided to use an algorithm that employed levenshtein's algorithm to detect discrepencies between two patient fields and determine whether the patients are in the same group. With our modified algorithm, we were able to achieve **99.9% accuracy** on the test data set, without hardcoding to any specific patients in the given data set. We also considered other algorithms, such as soundex tokens and metaphone, but given the time constraint and the fact that levenshtein was able to accurately predict a large majority of patient matches, we did not implement any additional algorithms and left that for future work.
+For this project, we decided to use a modified version of levenshtein's algorithm to detect discrepencies between two patient fields and determine whether the patients are in the same group. With our modified algorithm, we were able to achieve **99.9% accuracy** on the test data set, without hardcoding to any specific patients in the given data set. We also considered other algorithms, such as soundex tokens and metaphone, but given the time constraint and the fact that levenshtein was able to accurately predict a large majority of patient matches, we did not implement any additional algorithms and left that for future work.
 
 #### Data Cleaning
 We performed basic data cleaning before running our algorithm. This included things like converting all alphabetic characters to lowercase, converting gender to a binary value, and removing non-alphanumeric characters for certain fields, to make comparison easier.
@@ -43,5 +43,9 @@ We measured accuracy by running each patient in the test dataset against every o
   <img src="images/accuracy.png" height="300px"> 
   <img src="images/errors.png" height="300px"> 
 </p>
-* * * 
 
+#### Running the application
+
+To run the application, open terminal and enter `jupyter notebook ./patient_matcher.ipynb`, or run the python script using `python patient_matcher.py`. Make sure the required python dependencies are installed  (`numpy`, `pandas`, `matplotlib`).  
+
+* * *
