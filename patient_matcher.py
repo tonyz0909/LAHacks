@@ -148,10 +148,10 @@ def run(patientClean):
                 if result == actual:
                     correct += 1
                 elif result == True:
-                    print('false positive found between patients: ', patient['PatientID'], " and ", patient1['PatientID'])
+                    # print('false positive found between patients: ', patient['PatientID'], " and ", patient1['PatientID'])
                     falsePos += 1
                 elif result == False:
-                    print('false negative found between patients: ', patient['PatientID'], " and ", patient1['PatientID'])
+                    # print('false negative found between patients: ', patient['PatientID'], " and ", patient1['PatientID'])
                     falseNeg += 1
                 total += 1
 
