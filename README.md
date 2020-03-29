@@ -40,11 +40,8 @@ We used a bottom-up criteria when deciding if two patients were the same (ie had
 We measured accuracy by running each patient in the test dataset against every other patient, and comparing the result of the algorithm against whether the GroupID's actually matched. We were able to obtain 99.89% accuracy - out of 20100 total tests, 20078 tests were accurate, with only 10 false positives (matching two patients with different GroupIDs) and 12 false negatives (not matching two patients with the same GroupIDs). We modified the cutoff values for the algorithm to try to ensure as even a number of false positives and negatives as possible.
 
 <p align="center">
-  <img src="images/accuracy.png"> 
-</p>
-
-<p align="center">
-  <img src="images/errors.png"> 
+  <img src="images/accuracy.png" height="300px"> 
+  <img src="images/errors.png" height="300px"> 
 </p>
 * * * 
 
