@@ -34,14 +34,16 @@ We used a bottom-up criteria when deciding if two patients were the same (ie had
 
 >*The exception to this was for date of birth; if date of birth had more than 3 discrepencies, we automatically returned false since it is more likely that the patients with different DOB's are different people, rather than the same person, except with > 3 typos on the date of birth.
 
+*edit, we added a comparison metric that takes into account the number of comparisons successfully made (ie: both patients values were not null) If more than a certain amount of comparisons were made, we increased the threshold to allow for up to two total errors
+
 
 #### Accuracy
 
-We measured accuracy by running each patient in the test dataset against every other patient, and comparing the result of the algorithm against whether the GroupID's actually matched. We were able to obtain 99.89% accuracy - out of 20100 total tests, 20078 tests were accurate, with only 10 false positives (matching two patients with different GroupIDs) and 12 false negatives (not matching two patients with the same GroupIDs). We modified the cutoff values for the algorithm to try to ensure as even a number of false positives and negatives as possible.
+We measured accuracy by running each patient in the test dataset against every other patient, and comparing the result of the algorithm against whether the GroupID's actually matched. We were able to obtain 99.91% accuracy - out of 20100 total tests, 20081 tests were accurate, with only 10 false positives (matching two patients with different GroupIDs) and 9 false negatives (not matching two patients with the same GroupIDs). We modified the cutoff values for the algorithm to try to ensure as even a number of false positives and negatives as possible.
 
 <p align="center">
-  <img src="images/accuracy.png" height="300px"> 
-  <img src="images/errors.png" height="300px"> 
+  <img src="images/new_accuracy.png" height="300px"> 
+  <img src="images/new_errors.png" height="300px"> 
 </p>
 
 #### Running the application
