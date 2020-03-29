@@ -58,11 +58,11 @@ for col in alphabeticCols:
 # cleaning last and first name (removing digits, whitespace, and some special characters)
 # cleaned current city by removing digits
 for i in range(len(patientsClean)):
-    patientsClean.loc[i, 'Last Name'] = re.sub('[\d\s]', '', patientsClean.loc[i,'Last Name'])
-    patientsClean.loc[i, 'First Name'] = re.sub('[\d\s]', '', patientsClean.loc[i,'First Name'])
-    patientsClean.loc[i, 'Sex'] = re.sub('[\d\s]', '', patientsClean.loc[i,'Sex'])
+    patientsClean.loc[i, 'Last Name'] = re.sub('[\d\s~!@#%&:,]', '', patientsClean.loc[i,'Last Name'])
+    patientsClean.loc[i, 'First Name'] = re.sub('[\d\s~!@#%&:,]', '', patientsClean.loc[i,'First Name'])
+    patientsClean.loc[i, 'Sex'] = re.sub('[\d\s~!@#%&:,]', '', patientsClean.loc[i,'Sex'])
     patientsClean.loc[i, 'Sex'] = 0 if patientsClean.loc[i,'Sex'][0] == 'm' else 2 if patientsClean.loc[i,'Sex'][0] == 'f' else 1
-    patientsClean.loc[i, 'Current City'] = re.sub('[\d]', '', patientsClean.loc[i, 'Current City'])
+    patientsClean.loc[i, 'Current City'] = re.sub('[\d~!@#%&:,]', '', patientsClean.loc[i, 'Current City'])
 
 # verify if patient1 and patient2 are the same person
 # need to determine optimal cutoffs (ie what levenshtein score is considered "different" enough to be 2 different people?)
