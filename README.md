@@ -48,6 +48,4 @@ We measured accuracy by running each patient in the test dataset against every o
 
 To run the application, open terminal and enter `jupyter notebook ./patient_matcher.ipynb`, or run the python script using `python patient_matcher.py`. Make sure the required python dependencies are installed  (`numpy`, `pandas`, `matplotlib`).
 
-*Note: the final version of the application is located inside patient_matcher.py **NOT** the jupyter notebook file*
-
 * * *
