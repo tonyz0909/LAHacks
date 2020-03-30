@@ -30,7 +30,7 @@ After cleaning:
 
 For the matching algorithm, we used levenshtein's algorithm to determine the edit distance between two fields (ie "Lara" and "Laura" would have an edit distance of 1 by removing the "u" in "Laura"). We evaluated the majority, but not all, fields (patient first name, last name, middle initial, date of birth, etc.), taking into consideration the importance of the field in correctly identifying a match. For example, first name + date of birth was a crucial combination, as two people with the same first name and date of birth (accounting for possible typos) are extremely likely to be the same person (as there is unlikely to be an error typing in the wrong first name *and* date of birth), whereas only taking into account last name + date of birth could lead to confusion if the two patients are twins. We tested various combinations of fields and used the one that provided the highest accuracy.
 
-We used a bottom-up criteria when deciding if two patients were the same (ie had the same GroupID). When evaluating a field between two patients, if the edit distance was greater than a certain threshold, we counted it as an error. If the total number of errors amongst all fields evalauted was greater than 1, then we returned false (indicating that the two patients do not have the same GroupID)*. If the total number of errors was less than one, we returned true (indicating that the two patients do have the same GroupID).
+We used a bottom-up criteria when deciding if two patients were the same (ie had the same GroupID). When evaluating a field between two patients, if the edit distance was greater than a certain threshold, we counted it as an error. If the total number of errors amongst all fields evalauted was greater than 1, then we returned false (indicating that the two patients do not have the same GroupID)*. If the total number of errors was less than one, we returned true (indicating that the two patients do have the same GroupID). We also added a comparison metric that takes into account the number of comparisons successfully made (ie: both patients values were not null). If more than a certain amount of comparisons were made, we increased the threshold to allow for up to two total errors (ie if there was more data to work with, we were more lenient).
 
 >*The exception to this was for date of birth; if date of birth had more than 3 discrepencies, we automatically returned false since it is more likely that the patients with different DOB's are different people, rather than the same person, except with > 3 typos on the date of birth.
 
@@ -48,6 +48,10 @@ We measured accuracy by running each patient in the test dataset against every o
 
 #### Running the application
 
+<<<<<<< HEAD
 To run the application, open terminal and enter `jupyter notebook ./patient_matcher.ipynb`, or run the python script using `python patient_matcher.py`. Make sure the required python dependencies are installed  (`numpy`, `pandas`, `matplotlib`, `re`).  
+=======
+To run the application, open terminal and enter `jupyter notebook ./patient_matcher.ipynb`, or run the python script using `python patient_matcher.py`. Make sure the required python dependencies are installed  (`numpy`, `pandas`, `matplotlib`).
+>>>>>>> 05b7bad7fd1390e3f45501d45b6b612a9d877aa0
 
 * * *
