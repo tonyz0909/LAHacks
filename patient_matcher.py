@@ -133,7 +133,7 @@ def comparisons(patient1, patient2):
     return compsMade
 
 # Evaluation function to test accuracy and show stats
-def run(patientClean):
+def run():
     total = 0
     correct = 0
     falsePos = 0
@@ -184,8 +184,8 @@ def run(patientClean):
     plt.pie(sizes, explode=explode, labels=labels, colors=colors,
             autopct='%1.1f%%', shadow=True, startangle=140)
     plt.axis('equal')
-    plt.title('False Positives and Negatives')
+    plt.title('Errors')
     plt.show()
 
-run(patientsClean)
+run()
 
