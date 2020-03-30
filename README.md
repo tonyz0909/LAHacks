@@ -43,15 +43,11 @@ We measured accuracy by running each patient in the test dataset against every o
 
 <p align="center">
   <img src="images/new_accuracy.png" height="300px"> 
-  <img src="images/new_percentages.png" height="300px"> 
+  <img src="images/new_errors.png" height="300px"> 
 </p>
 
 #### Running the application
 
-<<<<<<< HEAD
-To run the application, open terminal and enter `jupyter notebook ./patient_matcher.ipynb`, or run the python script using `python patient_matcher.py`. Make sure the required python dependencies are installed  (`numpy`, `pandas`, `matplotlib`, `re`).  
-=======
-To run the application, open terminal and enter `jupyter notebook ./patient_matcher.ipynb`, or run the python script using `python patient_matcher.py`. Make sure the required python dependencies are installed  (`numpy`, `pandas`, `matplotlib`).
->>>>>>> 05b7bad7fd1390e3f45501d45b6b612a9d877aa0
+To run the application, open terminal and enter `jupyter notebook ./patient_matcher.ipynb`, or run the python script using `python patient_matcher.py`. Make sure the required python dependencies are installed  (`numpy`, `pandas`, `matplotlib`, `re`).
 
 * * *
